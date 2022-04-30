@@ -1,12 +1,12 @@
 
 # Define a list of all C and Assemnbly source files
-CXX_SRC = main.c
-ASM_SRC =
-HEADERS =
+CXX_SRC = main.c patterns.c layout.c screen.c
+ASM_SRC = patterns.s
+HEADERS = patterns.h layout.h screen.h
 
 
 # List of PNG images used for patterns
-IMAGES =
+IMAGES = mogus.png
 
 
 # Where the intermediate-stage Assembly/object files will be saved
