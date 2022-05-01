@@ -1,7 +1,8 @@
-#include "layout.h"
 
-#ifndef __SCREEN_H
-#define __SCREEN_H
+#ifndef __LEVEL_H
+#define __LEVEL_H
+
+#include "layout.h"
 
 typedef struct row_s {
     uint8_t layout;
@@ -11,14 +12,14 @@ typedef struct row_s {
     uint8_t num_obmas;
 } row_t;
 
-extern row_t screen[15];
+extern row_t level[15];
 
-void screen_randomize(void);
+void level_randomize(void);
 
 void row_clear_ombas(row_t * row);
 void row_fill_obmas(row_t * row);
-void screen_fill_obmas(void);
+void level_fill_obmas(void);
 
-void screen_draw(void);
+void level_draw(void);
 
 #endif
