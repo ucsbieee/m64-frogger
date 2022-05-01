@@ -1,13 +1,14 @@
-#include "screen.h"
+#include "level.h"
 #include <stdlib.h>
+#include "obma_stack.h"
 
-row_t screen[15];
+row_t level[15];
 
-void screen_randomize(void){
+void level_randomize(void){
     int i = 0;
     int var;
     for(i =0; i < 15; i++){
-        screen[i].layout = rand()%num_layouts;
+        level[i].layout = rand()%num_layouts;
     }
 
     for(i=0; i<15; i++){
@@ -18,11 +19,11 @@ void screen_randomize(void){
         else if(var == 3){
             var = -2;
         }
-        screen[i].velocity = var;
+        level[i].velocity = var;
     }
 
     for(i=0; i<15; i++){
-        screen[i].offset = rand();
+        level[i].offset = rand();
     }
 
 }
@@ -41,9 +42,9 @@ void row_fill_obmas(row_t * row) {
     row->num_obmas *= 4; // tiles are 4x4
     obma_stack_pop(row->num_obmas, row->num_obmas);
 }
-void screen_fill_obmas(void) {
+void level_fill_obmas(void) {
     uint8_t i;
     for (i = 0; i < 15; i++) {
-        row_fill_obmas(screen + i);
+        row_fill_obmas(level + i);
     }
 }

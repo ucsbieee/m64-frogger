@@ -1,7 +1,8 @@
-#include "int.h"
 
-#ifndef LAYOUT_H
-#define LAYOUT_H
+#ifndef __LAYOUT_H
+#define __LAYOUT_H
+
+#include <int.h>
 
 #define TILE_EMPTY ((uint8_t)0)
 #define TILE_TURTLE ((uint8_t)1)

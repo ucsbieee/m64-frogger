@@ -1,8 +1,8 @@
 
 # Define a list of all C and Assemnbly source files
-CXX_SRC = main.c patterns.c layout.c screen.c
+CXX_SRC = main.c patterns.c layout.c level.c obma_stack.c frog.c
 ASM_SRC = patterns.s
-HEADERS = patterns.h layout.h screen.h
+HEADERS = patterns.h layout.h level.h obma_stack.h frog.h
 
 
 # List of PNG images used for patterns
