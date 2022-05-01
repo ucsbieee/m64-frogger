@@ -19,4 +19,6 @@ void row_clear_ombas(row_t * row);
 void row_fill_obmas(row_t * row);
 void screen_fill_obmas(void);
 
+void screen_draw(void);
+
 #endif
