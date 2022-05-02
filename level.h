@@ -2,14 +2,12 @@
 #ifndef __LEVEL_H
 #define __LEVEL_H
 
-#include "layout.h"
+#include <int.h>
 
 typedef struct row_s {
     uint8_t layout;
     uint8_t offset;
     sint8_t velocity;
-    uint8_t ombas[64];
-    uint8_t num_obmas;
 } row_t;
 
 extern row_t level[15];
