@@ -29,7 +29,7 @@ void do_logic(void) {}
 // run after do_logic and once gpu is idle
 void fill_vram(void) {
 
-    level[0].offset = 0;
+    load_foreground_pattern(mogus_pattern, mogus_pmfa);
 
     stop();
 }

@@ -3,6 +3,7 @@
 #include "vram.h"
 #include <stdlib.h>
 #include "layout.h"
+#include "patterns.h"
 
 #define LEVEL_OBM_START ((uint8_t)1)
 #define LEVEL_OBM_END   ((uint8_t)60)
@@ -31,6 +32,15 @@ void level_randomize(void){
 }
 
 
+
+
+void level_draw_init(void) {
+    // to do
+}
+
+
+
+
 void level_draw_update(void) {
     uint8_t rowindex, tileindex, ombaindex = LEVEL_OBM_START;
 
@@ -48,11 +58,6 @@ void level_draw_update(void) {
                 OBM[ombaindex + 1].x = curr_offset + (tileindex * 16) + 8;
                 OBM[ombaindex + 2].x = curr_offset + (tileindex * 16);
                 OBM[ombaindex + 3].x = curr_offset + (tileindex * 16) + 8;
-
-                OBM[ombaindex + 0].y = (rowindex * 16);
-                OBM[ombaindex + 1].y = (rowindex * 16);
-                OBM[ombaindex + 2].y = (rowindex * 16) + 8;
-                OBM[ombaindex + 3].y = (rowindex * 16) + 8;
 
                 ombaindex += 4;
 

@@ -18,6 +18,7 @@ void row_clear_ombas(row_t * row);
 void row_fill_obmas(row_t * row);
 void level_fill_obmas(void);
 
-void level_draw(void);
+void level_draw_init(void);
+void level_draw_update(void);
 
 #endif
