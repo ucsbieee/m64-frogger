@@ -15,4 +15,6 @@ typedef uint8_t layout_t[16];
 extern const layout_t layouts[];
 extern const uint8_t num_layouts;
 
+extern const uint8_t tile_to_pattern[5][4];
+
 #endif

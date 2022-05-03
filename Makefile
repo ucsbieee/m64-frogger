@@ -6,7 +6,7 @@ HEADERS = patterns.h layout.h level.h frog.h
 
 
 # List of PNG images used for patterns
-IMAGES = mogus.png
+IMAGES = $(shell find patterns -name "*.png")
 
 
 # Where the intermediate-stage Assembly/object files will be saved

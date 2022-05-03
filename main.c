@@ -24,12 +24,19 @@
 void reset(void) {}
 
 // run 60 times a second
-void do_logic(void) {}
+void do_logic(void) {
+    level_randomize();
+}
 
 // run after do_logic and once gpu is idle
 void fill_vram(void) {
+    uint8_t i, j;
 
-    load_foreground_pattern(mogus_pattern, mogus_pmfa);
+    for (i = 0; i < 30; i++)
+        for (j = 0; j < 32; j++)
+            TXBL[i][j] = 0;
 
+    pattern_load_all();
+    level_draw_init();
     stop();
 }
