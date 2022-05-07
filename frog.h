@@ -13,5 +13,6 @@ void frog_moveup(frog_t * f);
 void frog_movedown(frog_t * f);
 void frog_moveright(frog_t * f);
 void frog_moveleft(frog_t * f);
+bool frog_hit(frog_t * f);
 
 #endif
